@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="500.0" maxWidth="500.0" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" styleClass="backgroundColor" stylesheets="@Style/loinMainMenuStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MyGame.MainMenuController">
+    <center>
+        <AnchorPane maxHeight="500.0" maxWidth="500.0" minHeight="500.0" minWidth="500.0" prefHeight="500.0" prefWidth="500.0" stylesheets="@Style/loinMainMenuStyle.css" BorderPane.alignment="CENTER">
+            <children>
+                <VBox layoutX="140.0" layoutY="183.0" prefHeight="70.0" prefWidth="220.0">
+                    <children>
+                        <Button fx:id="loginMenuLoginButton" alignment="CENTER" graphicTextGap="25.0" mnemonicParsing="false" onAction="#menuLoginButtonOnAction" prefHeight="50.0" prefWidth="220.0" style="-fx-background-radius: 60 60 60 60;" stylesheets="@Style/loinMainMenuStyle.css" text="LOG IN" textFill="WHITE">
+                            <font>
+                                <Font name="Baskerville Old Face" size="18.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <styleClass>
+                                <String fx:value="buttons" />
+                                <String fx:value="buttons:hover" />
+                                <String fx:value="buttons:pressed" />
+                            </styleClass>
+                        </Button>
+                    </children>
+                </VBox>
+                <VBox layoutX="140.0" layoutY="265.0" prefHeight="70.0" prefWidth="220.0">
+                    <children>
+                        <Button fx:id="loginMenuSignUpButton" alignment="CENTER" graphicTextGap="25.0" mnemonicParsing="false" onAction="#menuSignUpButtonOnAction" prefHeight="50.0" prefWidth="220.0" style="-fx-background-radius: 200;" stylesheets="@Style/loinMainMenuStyle.css" text="SIGN UP" textFill="WHITE">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <styleClass>
+                                <String fx:value="buttons" />
+                                <String fx:value="buttons:hover" />
+                                <String fx:value="buttons:pressed" />
+                            </styleClass>
+                            <font>
+                                <Font name="Baskerville Old Face" size="18.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+                <VBox layoutX="140.0" layoutY="350.0" prefHeight="70.0" prefWidth="220.0">
+                    <children>
+                        <Button fx:id="loginMenuExitButton" alignment="CENTER" contentDisplay="TOP" graphicTextGap="25.0" mnemonicParsing="false" onAction="#menuExitButtonOnAction" prefHeight="50.0" prefWidth="220.0" style="-fx-background-radius: 200;" stylesheets="@Style/loinMainMenuStyle.css" text="EXIT">
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <styleClass>
+                                <String fx:value="buttonExit" />
+                                <String fx:value="buttonExit:hover" />
+                                <String fx:value="buttonExit:pressed" />
+                            </styleClass>
+                            <font>
+                                <Font name="Baskerville Old Face" size="18.0" />
+                            </font>
+                        </Button>
+                    </children>
+                </VBox>
+                <Label fx:id="loginMenuLabel" contentDisplay="CENTER" layoutX="122.0" layoutY="81.0" styleClass="gradient-text" stylesheets="@Style/loinMainMenuStyle.css" text="LOGIN MENU">
+                    <font>
+                        <Font name="Candara Bold" size="45.0" />
+                    </font>
+                    <textFill>
+                        <LinearGradient endX="1.0" endY="0.6249999873565903" startX="0.321969719547214">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="0.11372549086809158" green="0.5254902243614197" blue="0.8823529481887817" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="0.9973082099596231">
+                                    <color>
+                                        <Color red="0.22439999878406525" green="0.33000001311302185" blue="0.27090153098106384" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="0.1143999993801117" green="0.5354800224304199" blue="0.8799999952316284" opacity="0.9179331064224243" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                </Label>
+            <MediaView fx:id="mediaView" fitHeight="10.0" fitWidth="10.0" layoutX="9.0" layoutY="9.0" />
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,34 @@
+.backgroundColor
+{
+    -fx-background-color: linear-gradient(to bottom left, #EEEEEE, #FAF8F9, #FFFFFF);
+}
+
+
+.buttons
+{
+    -fx-background-color :linear-gradient(to left, #113c62,  #113c62);
+}
+.buttons:hover
+{
+    -fx-background-color :linear-gradient(to left, #145b79, #145b79);
+}
+.buttons:pressed
+{
+    -fx-background-color :linear-gradient(to left, #000000, #262424);
+}
+
+
+
+.buttonExit
+{
+    -fx-background-color :linear-gradient(to right, #ff0000,  #ff0000);
+}
+.buttonExit:hover
+{
+    -fx-background-color :linear-gradient(to right, #c22e2e, #c22e2e);
+}
+.buttonExit:pressed
+{
+    -fx-background-color :linear-gradient(to top right, #ff0000,  #ff0000);
+}
+

@@ -1,0 +1,56 @@
+.backgroundColor{
+    -fx-background-color: linear-gradient(to left, #E5E6E4, #ffffff);
+}
+
+.btnNEXT
+{
+    -fx-background-color :#60696b;
+}
+.btnNEXT:hover
+{
+    -fx-background-color : #858e96;
+}
+.btnNEXT:pressed
+{
+    -fx-background-color : #60696b;
+}
+
+.btnMenu
+{
+    -fx-background-color :linear-gradient(to left, #43470b ,  #43470b);
+}
+.
+{
+    -fx-background-color :linear-gradient(to left, #767e20, #767e20);
+}
+.btnMenu:pressed
+{
+    -fx-background-color :linear-gradient(to left, #43470b, #43470b);
+}
+
+
+.btnNumbers
+{
+    -fx-background-color : #00ff87;
+}
+.btnNumbers:hover
+{
+    -fx-background-color : #0f971c;
+}
+.btnNumbers:pressed
+{
+    -fx-background-color : #00ff87 ;
+}
+
+.buttonLogOut
+{
+    -fx-background-color :linear-gradient(to left, #252323 ,  #252323);
+}
+.buttonLogOut:hover
+{
+    -fx-background-color :linear-gradient(to left, #625e5e, #625e5e);
+}
+.buttonLogOut:pressed
+{
+    -fx-background-color :linear-gradient(to left, #000000, #000000);
+}

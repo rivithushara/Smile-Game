@@ -1,0 +1,31 @@
+.backgroundColor{
+    -fx-background-color: linear-gradient(to left, #61D8DE, #E839F6);
+}
+
+.buttonLogin
+{
+    -fx-background-color : #105FDE;
+}
+.buttonLogin:hover
+{
+    -fx-background-color : #119CF2;
+}
+.buttonLogin:pressed
+{
+    -fx-background-color : #105FDE;
+}
+
+.buttonCancel
+{
+    -fx-background-color : #ED213A;
+}
+.buttonCancel:hover
+{
+    -fx-background-color : #a42323;
+}
+.buttonCancel:pressed
+{
+    -fx-background-color :#ED213A;
+}
+
+

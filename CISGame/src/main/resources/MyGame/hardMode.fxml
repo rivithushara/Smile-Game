@@ -1,0 +1,309 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane fx:id="root" maxHeight="580.0" maxWidth="920.0" minHeight="580.0" minWidth="920.0" prefHeight="580.0" prefWidth="920.0" styleClass="backgroundColor" stylesheets="@Style/gameUIStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MyGame.HardModeController">
+    <children>
+        <ImageView fx:id="hideImage" fitHeight="580.0" fitWidth="920.0" pickOnBounds="true">
+            <image>
+                <Image url="@Images/WallpaperDog1.jpg" />
+            </image>
+        </ImageView>
+        <ImageView fx:id="imageView" fitHeight="380.0" fitWidth="625.0" layoutX="12.0" layoutY="75.0" pickOnBounds="true" />
+        <TextField fx:id="txtAnswer" layoutX="741.0" layoutY="398.0" prefHeight="38.0" prefWidth="150.0" promptText="Your Answer">
+            <font>
+                <Font name="Centaur" size="22.0" />
+            </font></TextField>
+        <Text fx:id="lblLevelCount" fontSmoothingType="LCD" layoutX="649.0" layoutY="274.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Level " wrappingWidth="184.00009155273438">
+            <font>
+                <Font name="Centaur" size="34.0" />
+            </font>
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.6315789222717285" green="0.5520467758178711" blue="0.5520467758178711" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill></Text>
+        <Text fx:id="lblLevel" disable="true" fill="#d101ab" fontSmoothingType="LCD" layoutX="297.0" layoutY="49.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="324.00003662109384">
+            <font>
+                <Font name="Centaur" size="33.0" />
+            </font></Text>
+        <Text fx:id="lblRemainingTime" fontSmoothingType="LCD" layoutX="581.0" layoutY="47.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Time Remaining :  " wrappingWidth="223.9999755859376">
+            <font>
+                <Font name="Century" size="25.0" />
+            </font>
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0" startY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color green="0.4736842215061188" blue="0.07105263322591782" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill></Text>
+        <Text fx:id="lblRemainingTimeCount" layoutX="805.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="99.20004882812498">
+            <font>
+                <Font name="Centaur" size="62.0" />
+            </font>
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.6032360196113586" green="0.3499999940395355" blue="1.0" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.9684210419654846" green="0.16140350699424744" blue="0.16140350699424744" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill></Text>
+        <Button fx:id="btnNext" defaultButton="true" layoutX="772.0" layoutY="502.0" mnemonicParsing="false" onAction="#btnNextLevel" prefHeight="51.0" prefWidth="120.0" stylesheets="@Style/gameUIStyle.css" text="NEXT" textFill="WHITE">
+            <font>
+                <Font name="Baskerville Old Face" size="21.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <styleClass>
+                <String fx:value="btnNEXT" />
+                <String fx:value="btnNEXT:hover" />
+                <String fx:value="btnNEXT:pressed" />
+            </styleClass></Button>
+        <Label fx:id="lblAnswer" layoutX="648.0" layoutY="402.0" prefHeight="30.0" prefWidth="74.0" text=" Answer">
+            <font>
+                <Font name="Centaur" size="23.0" />
+            </font></Label>
+        <Button fx:id="btnSubmit" defaultButton="true" layoutX="762.0" layoutY="504.0" mnemonicParsing="false" onAction="#btnSubmitOnAction" opacity="0.71" prefHeight="45.0" prefWidth="107.0" stylesheets="@Style/gameUIStyle.css" text="Submit">
+            <font>
+                <Font name="Baskerville Old Face" size="21.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <styleClass>
+                <String fx:value="btnNumbers" />
+                <String fx:value="btnNumbers:hover" />
+                <String fx:value="btnNumbers:pressed" />
+            </styleClass>
+        </Button>
+        <Button fx:id="mainMenubtn" defaultButton="true" layoutX="25.0" layoutY="502.0" mnemonicParsing="false" onAction="#menuBtnOnAction" prefHeight="51.0" prefWidth="114.0" stylesheets="@Style/gameUIStyle.css" text=" Menu" textFill="WHITE">
+            <font>
+                <Font name="Baskerville Old Face" size="21.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <styleClass>
+                <String fx:value="btnMenu" />
+                <String fx:value="btnMenu:hover" />
+                <String fx:value="btnMenu:pressed" />
+            </styleClass>
+        </Button>
+        <Text fx:id="txtComment" fontSmoothingType="LCD" layoutX="282.0" layoutY="527.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" textOrigin="CENTER" wrappingWidth="356.8000244140626">
+            <font>
+                <Font name="Centaur" size="31.0" />
+            </font>
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0" startY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.4699999988079071" green="0.06620558351278305" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="1.0" green="0.1259259283542633" blue="0.1259259283542633" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Text>
+        <Text fx:id="playerScore" fontSmoothingType="LCD" layoutX="740.0" layoutY="131.0" strokeType="OUTSIDE" strokeWidth="0.0" textOrigin="CENTER" wrappingWidth="114.39999999999998">
+            <font>
+                <Font name="Century" size="25.0" />
+            </font>
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0" startY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.1894736886024475" green="0.011929824948310852" blue="0.011929824948310852" />
+                            </color>
+                        </Stop>
+                        <Stop offset="0.006729475100942127">
+                            <color>
+                                <Color red="0.1894736886024475" green="0.011929824948310852" blue="0.011929824948310852" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.07017543911933899" green="0.39181286096572876" blue="0.9473684430122375" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill>
+            <cursor>
+                <Cursor fx:constant="NONE" />
+            </cursor>
+        </Text>
+        <Text fx:id="levelScore" fontSmoothingType="LCD" layoutX="648.0" layoutY="325.0" strokeType="OUTSIDE" strokeWidth="0.0" textOrigin="CENTER" wrappingWidth="230.39981689453134">
+            <font>
+                <Font name="Century" size="25.0" />
+            </font>
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0" startY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.410526305437088" green="0.3253801167011261" blue="0.3040935695171356" />
+                            </color>
+                        </Stop>
+                        <Stop offset="0.9973082099596231">
+                            <color>
+                                <Color red="0.9368420839309692" green="0.8119298219680786" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.9368420839309692" green="0.8119298219680786" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill>
+            <cursor>
+                <Cursor fx:constant="NONE" />
+            </cursor>
+        </Text>
+        <Button fx:id="otherBtnNext" defaultButton="true" layoutX="568.0" layoutY="384.0" mnemonicParsing="false" onAction="#OtherNextBtnOnAction" prefHeight="51.0" prefWidth="120.0" stylesheets="@Style/gameUIStyle.css" text="Save" textFill="WHITE">
+            <font>
+                <Font name="Baskerville Old Face" size="21.0" />
+            </font>
+            <cursor>
+                <Cursor fx:constant="HAND" />
+            </cursor>
+            <styleClass>
+                <String fx:value="buttonLogOut" />
+                <String fx:value="buttonQuit:hover" />
+                <String fx:value="buttonQuit:pressed" />
+            </styleClass>
+        </Button>
+        <MediaView fx:id="mediaView" fitHeight="200.0" fitWidth="200.0" layoutX="149.0" layoutY="140.0" preserveRatio="false" />
+        <Text fx:id="playerComment" fontSmoothingType="LCD" layoutX="13.0" layoutY="225.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="893.1831150054932">
+            <font>
+                <Font name="Franklin Gothic Medium Cond" size="86.0" />
+            </font>
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.5157894492149353" green="0.5157894492149353" blue="0.5157894492149353" />
+                            </color>
+                        </Stop>
+                        <Stop offset="0.006729475100942127">
+                            <color>
+                                <Color red="0.5157894492149353" green="0.5157894492149353" blue="0.5157894492149353" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.5052631497383118" green="0.4116958975791931" blue="0.4116958975791931" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Text>
+        <Text fx:id="pScore" layoutX="649.0" layoutY="142.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Score : " wrappingWidth="114.39999999999998">
+            <font>
+                <Font name="Century" size="25.0" />
+            </font>
+            <fill>
+                <LinearGradient endX="1.0" endY="1.0">
+                    <stops>
+                        <Stop>
+                            <color>
+                                <Color red="0.1882352977991104" green="0.0117647061124444" blue="0.0117647061124444" />
+                            </color>
+                        </Stop>
+                        <Stop offset="1.0">
+                            <color>
+                                <Color red="0.07058823853731155" green="0.3921568691730499" blue="0.9490196108818054" />
+                            </color>
+                        </Stop>
+                    </stops>
+                </LinearGradient>
+            </fill>
+        </Text>
+        <TextField fx:id="player" layoutX="271.0" layoutY="384.0" prefHeight="51.0" prefWidth="273.0" promptText="Enter your name">
+            <font>
+                <Font name="Century" size="21.0" />
+            </font>
+        </TextField>
+      <Label layoutX="42.0" layoutY="25.0" prefHeight="30.0" prefWidth="194.0" text="Game Mode :   Hard">
+         <font>
+            <Font name="Candara" size="22.0" />
+         </font>
+         <textFill>
+            <RadialGradient centerX="0.9185022026431718" centerY="0.4090908874164928" radius="0.6743119353548103">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.9789473414421082" />
+                     </color>
+                  </Stop>
+                  <Stop offset="0.006729475100942127">
+                     <color>
+                        <Color red="0.9789473414421082" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Label>
+    </children>
+</AnchorPane>

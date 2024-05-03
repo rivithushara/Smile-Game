@@ -1,0 +1,54 @@
+.backgroundColorEasy
+{
+    -fx-background-color: linear-gradient(to bottom left, #551a1a, #373030, #191818);
+}
+.backgroundColorNormal
+{
+    -fx-background-color: linear-gradient(to bottom left, #551a1a, #373030, #191818);
+}
+.backgroundColorHard
+{
+    -fx-background-color: linear-gradient(to bottom left, #551a1a, #373030, #191818);
+}
+
+
+.buttonsEasy
+{
+    -fx-background-color :linear-gradient(to left, #463f1c,  #252323);
+}
+.buttonsEasy:hover
+{
+    -fx-background-color :linear-gradient(to left, #6e2577, #6e2577);
+}
+.buttonsEasy:pressed
+{
+    -fx-background-color :linear-gradient(to left, #000000, #262424);
+}
+.buttonsNormal
+{
+    -fx-background-color :linear-gradient(to left, #463f1c,  #252323);
+}
+.buttonsNormal:hover
+{
+    -fx-background-color :linear-gradient(to left, #b3861d, #b3861d);
+}
+.buttonsNormal:pressed
+{
+    -fx-background-color :linear-gradient(to left, #000000, #262424);
+}
+.buttonsHard
+{
+    -fx-background-color :linear-gradient(to left, #463f1c,  #252323);
+}
+.buttonsHard:hover
+{
+    -fx-background-color :linear-gradient(to left, #3c6318, #3c6318);
+}
+.buttonsHard:pressed
+{
+    -fx-background-color :linear-gradient(to left, #000000, #262424);
+}
+
+
+
+

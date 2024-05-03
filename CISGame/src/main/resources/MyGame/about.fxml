@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="580.0" maxWidth="920.0" minHeight="580.0" minWidth="920.0" prefHeight="580.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MyGame.MainMenuController">
+    <top>
+        <AnchorPane maxHeight="580.0" maxWidth="920.0" minHeight="580.0" minWidth="920.0" prefHeight="580.0" prefWidth="920.0" styleClass="backgroundColor" stylesheets="@Style/loginStyle.css" BorderPane.alignment="CENTER">
+            <children>
+                <Label layoutX="380.0" layoutY="51.0" prefHeight="74.0" prefWidth="159.0" text="ABOUT">
+                    <font>
+                        <Font name="Calibri Bold" size="50.0" />
+                    </font>
+                    <textFill>
+                        <LinearGradient endX="1.0" endY="1.0" startX="0.39772727272727276">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color opacity="0.7910334467887878" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color green="0.43474116921424866" blue="0.7799999713897705" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                </Label>
+                <Label fx:id="aboutBackLabel" alignment="TOP_LEFT" contentDisplay="TOP" layoutX="28.0" layoutY="151.0" prefHeight="138.0" prefWidth="883.0" text="This game is developed for CIS module as an Undergraduate final year project in Univesity of Bedfordshire." textFill="#545454ed">
+                    <font>
+                        <Font name="Calibri" size="20.0" />
+                    </font>
+                </Label>
+                <Button fx:id="aboutBackButton" layoutX="756.0" layoutY="484.0" mnemonicParsing="false" onAction="#aboutBackButtonOnAction" prefHeight="49.0" prefWidth="122.0" stylesheets="@Style/mainMenuStyle.css" text="Back" textFill="WHITE">
+                    <font>
+                        <Font name="Baskerville Old Face" size="21.0" />
+                    </font>
+                    <styleClass>
+                        <String fx:value="buttonLogOut" />
+                        <String fx:value="buttonQuit:hover" />
+                        <String fx:value="buttonQuit:pressed" />
+                    </styleClass>
+                </Button>
+            <MediaView fx:id="mediaView" fitHeight="10.0" fitWidth="10.0" layoutX="605.0" layoutY="25.0" preserveRatio="false" />
+            </children>
+        </AnchorPane>
+    </top>
+</BorderPane>

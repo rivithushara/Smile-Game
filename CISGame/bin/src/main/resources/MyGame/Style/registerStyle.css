@@ -1,0 +1,31 @@
+.backgroundColor{
+    -fx-background-color:  linear-gradient(to top left, #7f7fd5, #86a8e7, #91eae4);
+}
+
+
+.buttonRegister
+{
+    -fx-background-color :  #00F260;
+}
+.buttonRegister:hover
+{
+    -fx-background-color :  #096900;
+}
+.buttonRegister:pressed
+{
+    -fx-background-color :  #00F260;
+}
+
+
+.buttonCancel
+{
+    -fx-background-color : #2C5364;
+}
+.buttonCancel:hover
+{
+    -fx-background-color : #262424;
+}
+.buttonCancel:pressed
+{
+    -fx-background-color :#2C5364;
+}

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="580.0" maxWidth="920.0" minHeight="580.0" minWidth="920.0" prefHeight="580.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MyGame.RegisterController">
+    <right>
+        <AnchorPane maxHeight="580.0" maxWidth="920.0" minHeight="580.0" minWidth="920.0" prefHeight="580.0" prefWidth="920.0" styleClass="backgroundColor" stylesheets="@Style/registerStyle.css" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="firstName" layoutX="54.0" layoutY="124.0" prefHeight="45.0" prefWidth="310.0" promptText="FIRST NAME" style="-fx-background-color: FFFFFF;">
+                    <font>
+                        <Font name="Candara" size="15.0" />
+                    </font>
+                </TextField>
+                <Label contentDisplay="CENTER" layoutX="276.0" layoutY="26.0" prefHeight="66.0" prefWidth="200.0" text="SIGN UP">
+                    <font>
+                        <Font name="Calibri Bold" size="50.0" />
+                    </font>
+                    <textFill>
+                        <LinearGradient cycleMethod="REFLECT" endX="1.0" endY="1.0">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="0.5099999904632568" green="1.0" blue="0.6733333468437195" opacity="0.8670820593833923" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="0.6494035124778748" green="0.648421049118042" blue="0.6631578803062439" opacity="0.5799999833106995" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                </Label>
+                <PasswordField fx:id="signUpPassword" layoutX="54.0" layoutY="336.0" prefHeight="45.0" prefWidth="310.0" promptText="PASSWORD" style="-fx-background-color: FFFFFF;">
+                    <font>
+                        <Font name="Candara" size="15.0" />
+                    </font>
+                </PasswordField>
+                <Button fx:id="signUpButton" defaultButton="true" graphicTextGap="25.0" layoutX="54.0" layoutY="507.0" mnemonicParsing="false" onAction="#registerButtonOnAction" prefHeight="45.0" prefWidth="110.0" stylesheets="@Style/registerStyle.css" text="Sign Up" textFill="WHITE">
+                    <font>
+                        <Font name="Baskerville Old Face" size="21.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <styleClass>
+                        <String fx:value="buttonRegister" />
+                        <String fx:value="buttonRegister:hover" />
+                        <String fx:value="buttonRegister:pressed" />
+                    </styleClass>
+                </Button>
+                <Button fx:id="backButton" cancelButton="true" graphicTextGap="25.0" layoutX="748.0" layoutY="507.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="45.0" prefWidth="110.0" stylesheets="@Style/registerStyle.css" text="Cancel" textFill="WHITE">
+                    <font>
+                        <Font name="Baskerville Old Face" size="21.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <styleClass>
+                        <String fx:value="buttonCancel" />
+                        <String fx:value="buttonCancel:hover" />
+                        <String fx:value="buttonCancel:pressed" />
+                    </styleClass>
+                </Button>
+                <Label fx:id="signUpMessageLabel" layoutX="176.0" layoutY="517.0" prefHeight="22.0" prefWidth="299.0" textFill="#a30505dd">
+                    <font>
+                        <Font name="System Italic" size="16.0" />
+                    </font>
+                </Label>
+                <Label layoutX="54.0" layoutY="85.0" prefHeight="30.0" prefWidth="186.0" text="Create new acoount" textFill="#404040bd">
+                    <font>
+                        <Font name="Calibri Bold" size="21.0" />
+                    </font>
+                </Label>
+                <TextField fx:id="lastName" layoutX="54.0" layoutY="193.0" prefHeight="45.0" prefWidth="310.0" promptText="LAST NAME" style="-fx-background-color: FFFFFF;">
+                    <font>
+                        <Font name="Candara" size="15.0" />
+                    </font>
+                </TextField>
+                <TextField fx:id="signUpUsername" layoutX="54.0" layoutY="266.0" prefHeight="45.0" prefWidth="310.0" promptText="USERNAME" style="-fx-background-color: FFFFFF;">
+                    <font>
+                        <Font name="Candara" size="15.0" />
+                    </font>
+                </TextField>
+                <PasswordField fx:id="confirmPassword" layoutX="54.0" layoutY="405.0" prefHeight="45.0" prefWidth="310.0" promptText="CONFIRM PASSWORD" style="-fx-background-color: FFFFFF;">
+                    <font>
+                        <Font name="Candara" size="15.0" />
+                    </font>
+                </PasswordField>
+                <ImageView fx:id="registerImage" fitHeight="460.0" fitWidth="439.0" layoutX="440.0" layoutY="-9.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@Images/registerImg.png" />
+                    </image>
+                </ImageView>
+                <Hyperlink fx:id="loginHyperLink" layoutX="54.0" layoutY="451.0" onAction="#loginHyperLinkOnAction" prefHeight="25.0" prefWidth="263.0" text="I already have an account." textFill="#344885d3">
+                    <font>
+                        <Font name="Candara" size="17.0" />
+                    </font>
+                </Hyperlink>
+            <MediaView fx:id="mediaView" fitHeight="10.0" fitWidth="10.0" layoutX="720.0" />
+            </children>
+        </AnchorPane>
+    </right>
+</BorderPane>

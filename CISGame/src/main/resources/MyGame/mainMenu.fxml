@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="580.0" maxWidth="920.0" minHeight="580.0" minWidth="920.0" prefHeight="580.0" prefWidth="920.0" styleClass="backgroundColorLeftAnchor" stylesheets="@Style/mainMenuStyle.css" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MyGame.MainMenuController">
+    <left>
+        <AnchorPane focusTraversable="true" maxWidth="350.0" minWidth="350.0" prefHeight="580.0" prefWidth="350.0" styleClass="backgroundColorRightAnchor" stylesheets="@Style/mainMenuStyle.css" BorderPane.alignment="CENTER">
+            <children>
+                <VBox layoutY="200.0" prefHeight="380.0" prefWidth="350.0">
+                    <children>
+                        <Button fx:id="menuPlayButton" alignment="CENTER" contentDisplay="TOP" defaultButton="true" graphicTextGap="25.0" mnemonicParsing="false" onAction="#linkPlayButtonOnAction" prefHeight="100.0" prefWidth="350.0" stylesheets="@Style/mainMenuStyle.css" text="START GAME" textFill="WHITE">
+                            <font>
+                                <Font name="Centaur" size="19.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <styleClass>
+                                <String fx:value="buttons" />
+                                <String fx:value="buttons:hover" />
+                                <String fx:value="buttons:pressed" />
+                            </styleClass>
+                        </Button>
+                        <Button fx:id="menuHighscoreButton" alignment="CENTER" contentDisplay="TOP" defaultButton="true" graphicTextGap="25.0" mnemonicParsing="false" onAction="#linkHSButtonOnAction" prefHeight="100.0" prefWidth="350.0" stylesheets="@Style/mainMenuStyle.css" text="SCORE BOARD" textFill="WHITE">
+                            <font>
+                                <Font name="Centaur" size="19.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <styleClass>
+                                <String fx:value="buttons" />
+                                <String fx:value="buttons:hover" />
+                                <String fx:value="buttons:pressed" />
+                            </styleClass>
+                        </Button>
+                        <Button fx:id="menuAboutButton" alignment="CENTER" contentDisplay="TOP" defaultButton="true" graphicTextGap="25.0" mnemonicParsing="false" onAction="#linkAboutButtonOnAction" prefHeight="100.0" prefWidth="350.0" stylesheets="@Style/mainMenuStyle.css" text="ABOUT" textFill="WHITE">
+                            <font>
+                                <Font name="Centaur" size="19.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <styleClass>
+                                <String fx:value="buttons" />
+                                <String fx:value="buttons:hover" />
+                                <String fx:value="buttons:pressed" />
+                            </styleClass>
+                        </Button>
+                        <Button fx:id="menuQuitButton" alignment="CENTER" contentDisplay="TOP" defaultButton="true" graphicTextGap="25.0" mnemonicParsing="false" onAction="#linkQuitButtonOnAction" prefHeight="100.0" prefWidth="350.0" stylesheets="@Style/mainMenuStyle.css" text="QUIT" textFill="WHITE">
+                            <font>
+                                <Font name="Centaur" size="19.0" />
+                            </font>
+                            <cursor>
+                                <Cursor fx:constant="HAND" />
+                            </cursor>
+                            <styleClass>
+                                <String fx:value="buttonQuit" />
+                                <String fx:value="buttonQuit:hover" />
+                                <String fx:value="buttonQuit:pressed" />
+                            </styleClass>
+                        </Button>
+                    </children>
+                </VBox>
+                <Label alignment="CENTER_RIGHT" contentDisplay="TOP" layoutX="207.0" layoutY="52.0" prefHeight="63.0" prefWidth="136.0" text="MAIN">
+                    <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="0.6313725709915161" green="0.615686297416687" blue="0.615686297416687" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="1.0" green="1.0" blue="1.0" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                    <font>
+                        <Font size="50.0" />
+                    </font>
+                </Label>
+            </children>
+        </AnchorPane>
+    </left>
+    <center>
+        <AnchorPane prefHeight="622.0" prefWidth="590.0" BorderPane.alignment="CENTER">
+            <children>
+                <ImageView fitHeight="443.0" fitWidth="429.0" layoutX="55.0" layoutY="137.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@Images/mainMenu.png" />
+                    </image>
+                </ImageView>
+                <Label contentDisplay="TOP" layoutX="8.0" layoutY="52.0" text="MENU">
+                    <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color red="0.6313725709915161" green="0.615686297416687" blue="0.615686297416687" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="1.0" green="1.0" blue="1.0" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                    <font>
+                        <Font size="50.0" />
+                    </font>
+                </Label>
+                <Button fx:id="logOutButton" alignment="CENTER" contentDisplay="TOP" defaultButton="true" graphicTextGap="25.0" layoutX="421.0" layoutY="26.0" mnemonicParsing="false" onAction="#logOutButtonOnAction" opacity="0.43" prefHeight="40.0" prefWidth="125.0" style="-fx-border-radius: 40;" stylesheets="@Style/mainMenuStyle.css" text="LOG OUT" textFill="WHITE">
+                    <font>
+                        <Font name="Baskerville Old Face" size="19.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <styleClass>
+                        <String fx:value="buttonLogOut" />
+                        <String fx:value="buttonLogOut:hover" />
+                        <String fx:value="buttonLogOut:pressed" />
+                    </styleClass>
+                </Button>
+            <MediaView fx:id="mediaView" fitHeight="10.0" fitWidth="10.0" layoutX="141.0" layoutY="177.0" />
+            </children>
+        </AnchorPane>
+    </center>
+</BorderPane>

@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.media.MediaView?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="580.0" maxWidth="920.0" minHeight="580.0" minWidth="920.0" prefHeight="580.0" prefWidth="920.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="MyGame.LoginController">
+    <top>
+        <AnchorPane maxHeight="580.0" maxWidth="920.0" minHeight="580.0" minWidth="920.0" prefHeight="580.0" prefWidth="920.0" styleClass="backgroundColor" stylesheets="@Style/loginStyle.css" BorderPane.alignment="CENTER">
+            <children>
+                <TextField fx:id="loginUsername" layoutX="539.0" layoutY="218.0" prefHeight="50.0" prefWidth="300.0" promptText="USERNAME" style="-fx-background-color: FFFFFF;">
+                    <font>
+                        <Font name="Candara" size="16.0" />
+                    </font>
+                </TextField>
+                <ImageView fx:id="loginImageView" fitHeight="375.0" fitWidth="479.0" layoutY="144.0" pickOnBounds="true">
+                    <image>
+                        <Image url="@Images/2.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="380.0" layoutY="51.0" prefHeight="74.0" prefWidth="159.0" text="LOG IN">
+                    <font>
+                        <Font name="Calibri Bold" size="50.0" />
+                    </font>
+                    <textFill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                            <stops>
+                                <Stop>
+                                    <color>
+                                        <Color opacity="0.7910334467887878" />
+                                    </color>
+                                </Stop>
+                                <Stop offset="1.0">
+                                    <color>
+                                        <Color red="0.4736842215061188" blue="0.7894737124443054" />
+                                    </color>
+                                </Stop>
+                            </stops>
+                        </LinearGradient>
+                    </textFill>
+                </Label>
+                <PasswordField fx:id="loginPassword" layoutX="539.0" layoutY="324.0" prefHeight="50.0" prefWidth="300.0" promptText="PASSWORD" style="-fx-background-color: FFFFFF;">
+                    <font>
+                        <Font name="Candara" size="15.0" />
+                    </font>
+                </PasswordField>
+                <Button fx:id="loginButton" graphicTextGap="25.0" layoutX="539.0" layoutY="459.0" mnemonicParsing="false" onAction="#loginButtonOnAction" prefHeight="45.0" prefWidth="110.0" stylesheets="@Style/loginStyle.css" text="Login" textFill="WHITE">
+                    <font>
+                        <Font name="Baskerville Old Face" size="21.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <styleClass>
+                        <String fx:value="buttonLogin" />
+                        <String fx:value="buttonLogin:hover" />
+                        <String fx:value="buttonLogin:pressed" />
+                    </styleClass>
+                </Button>
+                <Button fx:id="CancelButton" cancelButton="true" graphicTextGap="25.0" layoutX="730.0" layoutY="459.0" mnemonicParsing="false" onAction="#backButtonOnAction" prefHeight="45.0" prefWidth="110.0" stylesheets="@Style/loginStyle.css" text="Cancel" textFill="WHITE">
+                    <font>
+                        <Font name="Baskerville Old Face" size="21.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <styleClass>
+                        <String fx:value="buttonCancel" />
+                        <String fx:value="buttonCancel:hover" />
+                        <String fx:value="buttonCancel:pressed" />
+                    </styleClass>
+                </Button>
+                <Label fx:id="loginMessageLabel" alignment="CENTER" contentDisplay="CENTER" layoutX="539.0" layoutY="415.0" prefHeight="22.0" prefWidth="300.0" textFill="#e41e1e">
+                    <font>
+                        <Font name="System Italic" size="15.0" />
+                    </font>
+                </Label>
+                <CheckBox fx:id="loginCheckBox" layoutX="539.0" layoutY="375.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="246.0" text="Please keep logged in." textFill="#0b00ff" underline="true" visible="false">
+                    <font>
+                        <Font size="15.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </CheckBox>
+                <Label layoutX="539.0" layoutY="183.0" prefHeight="22.0" prefWidth="308.0" text=" Username" textFill="#545454ed">
+                    <font>
+                        <Font name="Calibri" size="17.0" />
+                    </font>
+                </Label>
+                <Label layoutX="539.0" layoutY="288.0" prefHeight="22.0" prefWidth="308.0" text=" Password" textFill="#545454ed">
+                    <font>
+                        <Font name="Calibri" size="17.0" />
+                    </font>
+                </Label>
+                <Hyperlink fx:id="registerHyperLink" layoutX="539.0" layoutY="374.0" onAction="#registerHyperLinkOnAction" prefHeight="35.0" prefWidth="182.0" text="Don't have an acoount.?" textFill="#1d25ff">
+                    <font>
+                        <Font name="Calibri" size="17.0" />
+                    </font>
+                </Hyperlink>
+            <MediaView fx:id="mediaView" fitHeight="10.0" fitWidth="10.0" />
+            </children>
+        </AnchorPane>
+    </top>
+</BorderPane>
